@@ -1,6 +1,6 @@
-# Pulse - Distributed Task Orchestrator
+# TaskPulse - Distributed Task Orchestrator
 
-Pulse is a distributed task orchestration system built with Python, FastAPI, PostgreSQL, and Redis. It provides a robust platform for scheduling, executing, and monitoring tasks across multiple workers.
+TaskPulse is a distributed task orchestration system built with Python, FastAPI, PostgreSQL, and Redis. It provides a robust platform for scheduling, executing, and monitoring tasks across multiple workers.
 
 ## Architecture
 
@@ -66,7 +66,7 @@ PENDING → RUNNING → COMPLETED
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd pulse
+cd TaskPulse
 
 # Copy environment file
 cp .env.example .env
@@ -97,7 +97,7 @@ pip install -r requirements-dev.txt
 docker-compose up -d postgres redis
 
 # Set environment variables
-export DATABASE_URL=postgresql+asyncpg://postgres:postgres@localhost:5432/pulse
+export DATABASE_URL=postgresql+asyncpg://postgres:postgres@localhost:5432/taskpulse
 export REDIS_URL=redis://localhost:6379/0
 export TESTING=1  # For SQLite in tests
 
@@ -202,7 +202,7 @@ Redis is mocked in tests to ensure:
 ## Project Structure
 
 ```
-pulse/
+TaskPulse/
 ├── app/
 │   ├── api/
 │   │   ├── deps.py           # Dependencies (auth, db)
